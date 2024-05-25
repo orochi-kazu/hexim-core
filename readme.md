@@ -2,6 +2,10 @@
 
 The domain layer of Hexim, intended for use in front- and back-end applications.
 
+[![Lint and test](
+https://github.com/orochi-kazu/hexim-core/actions/workflows/test.yaml/badge.svg
+)](https://github.com/orochi-kazu/hexim-core/actions/workflows/test.yaml)
+
 ## Getting started
 
 Normal `npm` vibes, just note that the code root dir is `lib`, so be there to
