@@ -18,9 +18,9 @@ Not expecting any, but hmu if you're keen, for whatever reason.
 
 ## Acknowledgements
 
-`prng` has some interesting licence details, and is not the `prng` published on
-`npm`. This codebase only uses `LFib4` from that package, so I think it's safe,
-but lmk if you disagree.
+[`prng`](https://github.com/dworthen/prng) has some interesting licence details,
+and is not the `prng` published on `npm`. This codebase only uses `LFib4` from
+that package, so I think it's safe, but lmk if you disagree.
 
 Also, I'm very grateful to have found a relatively-portable set of pseudo-random
 number generators with strong principles and references. I'm not sure that this
@@ -44,7 +44,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 ```
 
-See also: [./licence.txt]
+See also: [licence.txt](./licence.txt)
 
 ### Extensions
 
