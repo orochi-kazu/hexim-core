@@ -1,0 +1,25 @@
+{
+  "name": "hexim-core",
+  "version": "0.0.1",
+  "license": "Apache-2.0",
+  "type": "module",
+  "scripts": {
+    "lint:check": "standard",
+    "lint": "standard --fix",
+    "test": "node --experimental-vm-modules ./node_modules/.bin/jest",
+    "prepare": "cd .. && husky"
+  },
+  "dependencies": {
+    "prng": "git://github.com/dworthen/prng#c8a926d"
+  },
+  "devDependencies": {
+    "husky": "^9.0.11",
+    "jest": "^29.7.0",
+    "lint-staged": "^15.2.4",
+    "standard": "*"
+  },
+  "engines": { "node": ">=22" },
+  "standard": { "globals": ["jest", "describe", "it", "expect"] },
+  "lint-staged": { "*.js": "npm run lint" },
+  "jest": { "transform": {} }
+}

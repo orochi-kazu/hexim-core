@@ -1,0 +1,3 @@
+cd lib
+npx lint-staged
+npm test
