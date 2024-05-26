@@ -31,4 +31,4 @@ jobs:
 
     - name: Test
       working-directory: lib
-      run: npm test
+      run: npm test -- --coverage
