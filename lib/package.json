@@ -19,7 +19,7 @@
     "standard": "*"
   },
   "engines": { "node": ">=22" },
-  "standard": { "globals": ["jest", "describe", "it", "expect"] },
+  "standard": { "globals": ["jest", "describe", "it", "test", "expect"] },
   "lint-staged": { "*.js": "npm run lint" },
   "jest": {
     "transform": {},
