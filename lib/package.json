@@ -6,7 +6,8 @@
   "scripts": {
     "lint:check": "standard",
     "lint": "standard --fix",
-    "test": "node --experimental-vm-modules ./node_modules/.bin/jest",
+    "test:ci": "node --experimental-vm-modules ./node_modules/.bin/jest --coverage",
+    "test": "node --experimental-vm-modules ./node_modules/.bin/jest --watch",
     "prepare": "cd .. && husky"
   },
   "dependencies": {
