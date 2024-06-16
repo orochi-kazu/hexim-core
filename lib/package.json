@@ -11,7 +11,8 @@
     "prepare": "cd .. && husky"
   },
   "dependencies": {
-    "prng": "git://github.com/dworthen/prng#c8a926d"
+    "prng": "git://github.com/dworthen/prng#c8a926d",
+    "short-hash": "^1.0.0"
   },
   "devDependencies": {
     "husky": "^9.0.11",
