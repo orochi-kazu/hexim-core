@@ -19,7 +19,7 @@ Programmatic play and speedruns are encouraged.
 sequenceDiagram
   participant Menu
   participant History
-  Menu->>Game: Start game (seed, players, map)
+  Menu->>Game: Start game<br/>(seed, players, map params)
   Game->>GameTree: build new
   Game->>WorldMap: build new
   WorldMap->>BoardFactory: build new
@@ -32,23 +32,41 @@ sequenceDiagram
   Game->>Menu: ok
 ```
 
-## World map action
+## World map actions
 
 ### Buy tile
 
 ```mermaid
 sequenceDiagram
   participant History
-  Game->>WorldMap: buy tile (player, type)
+  participant Player
+  Game->>Player: verify budget
+  Player->>Game: ok
+  Game->>WorldMap: buy tile<br/>(player, type)
   WorldMap->>DrawnPool: consume tile
-  WorldMap->>Player: assign tile
-  WorldMap->>Deck: draw
+  WorldMap-->>Deck: draw
   WorldMap->>Game: ok
+  Game->>Player: assign tile
+  Player->>Game: ok
   Game->>History: push "buy tile" action
   History->>Game: ok
 ```
 
 ### Place tile
+
+```mermaid
+sequenceDiagram
+  participant History
+  participant Player
+  Game->>Player: verify hand tile
+  Game->>WorldMap: place tile<br/>(player, type, x, y)
+  WorldMap->>RegionRepo: claim spot
+  WorldMap->>Game: ok
+  Game->>Player: consume tile
+  Player->>Game: ok
+  Game->>History: push "buy tile" action
+  History->>Game: ok
+```
 
 ### Buy item
 
