@@ -1,0 +1,6 @@
+export * as board from './src/domain/board'
+export * as deck from './src/domain/deck'
+export * as game from './src/domain/game'
+export * as genTree from './src/domain/gen-tree'
+export * as worldMap from './src/domain/world-map'
+export * as params from './src/domain/params'
